@@ -1,0 +1,28 @@
+import {
+  lazy,
+  LocationProvider,
+  ErrorBoundary,
+  Router,
+  Route
+} from 'preact-iso';
+
+// Synchronous
+import Home from './routes/Home.tsx';
+
+// Asynchronous (throws a promise)
+const NotFound = lazy(() => import('./routes/_404.tsx'));
+
+export default function App() {
+  return (
+      <LocationProvider>
+        <ErrorBoundary>
+          <Router>
+            {/* Alternative dedicated route component for better TS support */}
+            <Route path="/" component={Home} />
+            {/* `default` prop indicates a fallback route. Useful for 404 pages */}
+            <NotFound default component={NotFound} />
+          </Router>
+        </ErrorBoundary>
+      </LocationProvider>
+  );
+}
