@@ -18,7 +18,7 @@ type NavDropdownProps = {
   links: string[];
   titles: string[];
 }
-// TODO: format all this in WebStorm
+
 function NavDropdown({children, links, titles}:NavDropdownProps) {
 
 	const [isExpanded, setExpanded] = useState<boolean>(false);
@@ -71,8 +71,8 @@ export default function Header() {
 			</a>
 			<nav className={"bg-sky-900 flex flex-row items-center px-8 gap-8"}>
 				<NavDropdown
-					titles={["myNWP","myClass","NWP Website","Outlook"]}
-					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca","outlook.office.com/mail"]}
+					titles={["myNWP","myClass","NWP Website","Outlook","OneDrive"]}
+					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca","outlook.office.com/mail","gprc-my.sharepoint.com"]}
 				>
 					Quick Links
 				</NavDropdown>
