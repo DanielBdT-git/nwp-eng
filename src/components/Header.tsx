@@ -32,7 +32,7 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 		>
 			<button
 				onClick={() => setForced(!isForced)}
-				className={"flex flex-row items-center py-4 font-outfit text-white text-lg cursor-pointer"}
+				className={"flex flex-row items-center py-4 gap-1 font-outfit text-white text-lg cursor-pointer"}
 			>
 				{children}
 				<span className={`material-symbols-outlined transition duration-200 ${isExpanded||isForced?"rotate-180":"rotate-0"}`}>arrow_drop_down</span>
@@ -41,11 +41,11 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 			{isExpanded || isForced
 				?<ul className={"absolute"}>
 					{titles.map((title,idx) => (
-						<li key={idx} className={"px-4 py-2 bg-sky-900 hover:bg-sky-800 last:rounded-b"}>
+						<li key={idx} className={"flex bg-sky-900 hover:bg-sky-800 last:rounded-b"}>
 							<a
 								href={`https://${links[idx]}`}
 								target={"_blank"}
-								className={"font-outfit text-white text-lg"}
+								className={"px-4 py-2 w-full font-outfit text-white text-lg"}
 							>
 								{title}
 							</a>
@@ -67,12 +67,12 @@ export default function Header() {
 				className={"bg-sky-800 flex flex-row items-center p-8 gap-4"}
 			>
 				<img src={"/nwp.svg"} alt={"NWP"} className={"h-12"}></img>
-				<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Student Hub</h1>
+				<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Students Hub</h1>
 			</a>
 			<nav className={"bg-sky-900 flex flex-row items-center px-8 gap-8"}>
 				<NavDropdown
-					titles={["myNWP","myClass","Outlook"]}
-					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","outlook.office.com/mail"]}
+					titles={["myNWP","myClass","NWP Website","Outlook"]}
+					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca","outlook.office.com/mail"]}
 				>
 					Quick Links
 				</NavDropdown>
