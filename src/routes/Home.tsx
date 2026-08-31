@@ -1,6 +1,6 @@
 import Header from "../components/Header.tsx";
 import { GovAlberta, Chalkboard, Books, NWP, Outlook, OneDrive } from "../components/Icons.tsx"
-import type { ReactNode } from "preact/preact-compat"
+import type { ReactNode } from "preact/compat"
 
 type QuickLinkProps = {
 	label: string;

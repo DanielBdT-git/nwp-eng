@@ -25,7 +25,7 @@ export default function App() {
             <Route path="/maps" component={Maps}/>
             
             {/* `default` prop indicates a fallback route. Useful for 404 pages */}
-            <NotFound default component={NotFound}/>
+            <Route default component={NotFound}/>
           </Router>
         </ErrorBoundary>
       </LocationProvider>
