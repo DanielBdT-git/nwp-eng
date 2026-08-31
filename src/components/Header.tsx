@@ -70,14 +70,15 @@ export default function Header() {
 				<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Students Hub</h1>
 			</a>
 			<nav className={"bg-sky-900 flex flex-row items-center px-8 gap-8"}>
+				<NavLink to={"/"}>Home</NavLink>
 				<NavDropdown
-					titles={["myNWP","myClass","NWP Website","Outlook","OneDrive"]}
-					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca","outlook.office.com/mail","gprc-my.sharepoint.com"]}
+					titles={["myNWP","myClass","NWP Website","NWPSA","Outlook","OneDrive"]}
+					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca","nwpsa.ca","outlook.office.com/mail","gprc-my.sharepoint.com"]}
 				>
 					Quick Links
 				</NavDropdown>
 				<NavLink to={"/courses"}>Courses</NavLink>
-				<NavLink to={"/map"}>Maps</NavLink>
+				<NavLink to={"/maps"}>Maps</NavLink>
 			</nav>
 		</header>
 	);
