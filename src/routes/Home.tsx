@@ -1,5 +1,5 @@
 import Header from "../components/Header.tsx";
-import { GovAlberta, Chalkboard, Books, NWP, Outlook, OneDrive } from "../components/Icons.tsx"
+import { GovAlberta, Chalkboard, Books, NWP, Outlook, OneDrive, Calendar } from "../components/Icons.tsx"
 import type { ReactNode } from "preact/compat"
 
 type QuickLinkProps = {
@@ -22,7 +22,7 @@ function QuickLink({label, url, icon}:QuickLinkProps) {
 
 export default function Home() {
   return (<>
-      <Header/>
+      <Header currentTab={"Home"}/>
       <main className="flex sm:flex-col-reverse md:flex-row p-4 gap-4">
       	<img
       		src="/map_gp_campus.png"
@@ -38,6 +38,7 @@ export default function Home() {
    					<QuickLink label={"myNWP Document Library"} url={"my.nwpolytech.ca/SelfService/Custom/Documents/Default.aspx"} icon={<Books/>}/>
    					<QuickLink label={"NWP Website"} url={"nwpolytech.ca"} icon={<NWP/>}/>
    					<QuickLink label={"myPass"} url={"public.education.alberta.ca/PASI/mypass/home"} icon={<GovAlberta/>}/>
+   					<QuickLink label={"Important Dates"} url={"nwpolytech.ca/events?name=&event_category%5B568%5D=568&date="} icon={<Calendar/>}/>
    					<QuickLink label={"NWP Students' Association"} url={"nwpsa.ca"} icon={null}/>
    					<QuickLink label={"Outlook"} url={"outlook.office.com/mail"} icon={<Outlook/>}/>
    					<QuickLink label={"OneDrive"} url={"gprc-my.sharepoint.com"} icon={<OneDrive/>}/>

@@ -3,12 +3,13 @@ import { useState } from "preact/compat"
 
 type NavLinkProps = {
   to: string;
+  current?: boolean;
   children: ReactNode;
 }
 
-function NavLink ({to, children}:NavLinkProps) {
-  return (<a href={to} className={"flex flex-row items-center font-outfit text-white text-lg"}>
-    <span className={"hover:underline"}>{children}</span>
+function NavLink ({to, current=false, children}:NavLinkProps) {
+  return (<a href={to} className={`flex flex-row items-center font-outfit text-white text-lg border-y-4 border-transparent ${current?"border-b-yellow-500":""}`}>
+    <span className={"hover:font-medium"}>{children}</span>
   </a>);
 }
 
@@ -32,7 +33,7 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 		>
 			<button
 				onClick={() => setForced(!isForced)}
-				className={"flex flex-row items-center py-4 gap-1 font-outfit text-white text-lg cursor-pointer"}
+				className={"flex flex-row items-center py-4 gap-1 font-outfit text-white text-lg cursor-pointer hover:font-medium"}
 			>
 				{children}
 				<span className={`material-symbols-outlined transition duration-200 ${isExpanded||isForced?"rotate-180":"rotate-0"}`}>arrow_drop_down</span>
@@ -59,7 +60,11 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 }
 
 
-export default function Header() {
+type HeaderProps = {
+	currentTab: "Home" | "Faculty" | "Maps";
+}
+
+export default function Header({currentTab}:HeaderProps) {
 	return (
 		<header>
 			<a
@@ -70,15 +75,15 @@ export default function Header() {
 				<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Students Hub</h1>
 			</a>
 			<nav className={"bg-sky-900 flex flex-row items-center px-8 gap-8"}>
-				<NavLink to={"/"}>Home</NavLink>
+				<NavLink to={"/"} current={currentTab==="Home"}>Home</NavLink>
 				<NavDropdown
-					titles={["myNWP","myClass","NWP Website","NWPSA","Outlook","OneDrive"]}
-					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca","nwpsa.ca","outlook.office.com/mail","gprc-my.sharepoint.com"]}
+					titles={["myNWP","myClass","NWP Website","Outlook","OneDrive"]}
+					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca","outlook.office.com/mail","gprc-my.sharepoint.com"]}
 				>
 					Quick Links
 				</NavDropdown>
-				<NavLink to={"/courses"}>Courses</NavLink>
-				<NavLink to={"/maps"}>Maps</NavLink>
+				<NavLink to={"/faculty"} current={currentTab==="Faculty"}>Faculty</NavLink>
+				<NavLink to={"/maps"} current={currentTab==="Maps"}>Maps</NavLink>
 			</nav>
 		</header>
 	);
