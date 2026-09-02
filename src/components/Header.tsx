@@ -37,7 +37,7 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 				className={`flex flex-row items-center py-4 gap-1 font-outfit text-white text-lg cursor-pointer hover:font-medium ${isExpanded||isForced?"font-medium":""}`}
 			>
 				{children}
-				<span className={`material-symbols-outlined transition duration-200 ${isExpanded||isForced?"rotate-180":"rotate-0"}`}>arrow_drop_down</span>
+				<i className={`ph-fill ph-caret-down transition duration-200 text-sm ${isExpanded||isForced?"rotate-180":"rotate-0"}`}></i>
 			</button>
 
 			{isExpanded || isForced
