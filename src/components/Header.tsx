@@ -1,5 +1,6 @@
 import type { ReactNode } from "preact/compat";
 import { useState } from "preact/compat"
+import { NWP } from "./Icons.tsx";
 
 type NavLinkProps = {
   to: string;
@@ -33,7 +34,7 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 		>
 			<button
 				onClick={() => setForced(!isForced)}
-				className={"flex flex-row items-center py-4 gap-1 font-outfit text-white text-lg cursor-pointer hover:font-medium"}
+				className={`flex flex-row items-center py-4 gap-1 font-outfit text-white text-lg cursor-pointer hover:font-medium ${isExpanded||isForced?"font-medium":""}`}
 			>
 				{children}
 				<span className={`material-symbols-outlined transition duration-200 ${isExpanded||isForced?"rotate-180":"rotate-0"}`}>arrow_drop_down</span>
@@ -66,15 +67,19 @@ type HeaderProps = {
 
 export default function Header({currentTab}:HeaderProps) {
 	return (
-		<header>
-			<a
-				href={"/"}
-				className={"bg-sky-800 flex flex-row items-center p-8 gap-4"}
-			>
-				<img src={"/nwp.svg"} alt={"NWP"} className={"h-12"}></img>
-				<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Students Hub</h1>
-			</a>
-			<nav className={"bg-sky-900 flex flex-row items-center px-8 gap-8"}>
+		<header className={"bg-[url(/plane.jpg)] bg-center bg-cover bg-no-repeat"}>
+			<div className={"bg-sky-800/80"}>
+				<a
+					href={"/"}
+					className={"w-max flex flex-row items-center p-8 gap-4"}
+				>
+					<span className="size-16 text-white h-full">
+						<NWP/>
+					</span>
+					<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Students Hub</h1>
+				</a>
+			</div>
+			<nav className={"bg-sky-900/95 flex flex-row items-center px-8 gap-8"}>
 				<NavLink to={"/"} current={currentTab==="Home"}>Home</NavLink>
 				<NavDropdown
 					titles={["myNWP","myClass","NWP Website","Outlook","OneDrive"]}
