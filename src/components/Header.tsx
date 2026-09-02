@@ -62,7 +62,7 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 
 
 type HeaderProps = {
-	currentTab: "Home" | "Faculty" | "Maps";
+	currentTab: "404" | "Home" | "Faculty" | "Maps";
 }
 
 export default function Header({currentTab}:HeaderProps) {
