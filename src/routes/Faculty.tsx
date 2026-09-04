@@ -41,12 +41,13 @@ export default function Courses() {
 	return (<>
 		<Header currentTab={"Faculty"}/>
 		<main className={"flex flex-row flex-wrap p-4 gap-4"}>
-			<ProfCard image={"bKelly.png"} firstName={"Braden"} lastName={"Kelly"} role={"Engineering Instructor"} office={"J2smth"}/>
-			<ProfCard firstName={"Abdel"} lastName={"Bensouilah"} role={"Math Instructor"} office={"J2smth"}/>
-			<ProfCard image={"lRawluk.jpg"} firstName={"Les"} lastName={"Rawluk"} role={"Chemistry Instructor"} office={"J2smth"}/>
+			<ProfCard image={"bKelly.png"} firstName={"Braden"} lastName={"Kelly"} role={"Engineering Instructor"} office={"J218"}/>
+			<ProfCard firstName={"Abdel"} lastName={"Bensouilah"} role={"Math Instructor"} office={"J210"}/>
+			<ProfCard image={"lRawluk.jpg"} firstName={"Les"} lastName={"Rawluk"} role={"Chemistry Instructor"} office={"J214"}/>
 			<ProfCard firstName={"Glenda"} lastName={"Delos Reyes"} role={"Physics Instructor"} office={"J216"}/>
 			<ProfCard firstName={"Tom"} lastName={"mcLeister"} role={"Math Instructor"} office={"J212"}/>
-			<ProfCard firstName={"I Forgot"} lastName={"His Name"} role={"Chair of Schience Dept."} office={"????"}/>
+			<ProfCard firstName={"Heather"} lastName={"Joyce"} role={"English Instructor"} office={"C418"}/>
+			<ProfCard firstName={"Brian"} lastName={"Redmond"} role={"Chair of Schience Dept."} office={"J206"}/>
 		</main>
 	</>);
 }
