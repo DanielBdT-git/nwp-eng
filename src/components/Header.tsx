@@ -41,7 +41,7 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 			</button>
 
 			{isExpanded || isForced
-				?<ul className={"absolute"}>
+				?<ul className={"absolute z-999 shadow-lg"}>
 					{titles.map((title,idx) => (
 						<li key={idx} className={"flex bg-sky-900 hover:bg-sky-800 last:rounded-b"}>
 							<a
