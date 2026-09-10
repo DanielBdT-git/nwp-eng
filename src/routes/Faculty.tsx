@@ -119,76 +119,82 @@ function ProfCard({image, firstName, lastName, role, office, email, phone, cours
 export default function Courses() {
 	return (<>
 		<Header currentTab={"Faculty"}/>
-		<main className={"flex flex-row flex-wrap p-4 gap-4"}>
-			<ProfCard
-				image={"bKelly.png"}
-				firstName={"Braden"}
-				lastName={"Kelly"}
-				role={"Engineering Instructor"}
-				office={"J218"}
-				email={"bkelly@nwpolytech.ca"}
-				phone={"780-539-2963"}
-				courses={["EG1000 Success in Engineering","EG1300 Engineering Mechanics"]}
-				outlines={["EG1300","EG1300"]}
-				timetable={"BKelly"}
-			/>
-			<ProfCard
-				image={"lRawluk.jpg"}
-				firstName={"Les"} 
-				lastName={"Rawluk"}
-				role={"Chemistry Instructor"}
-				office={"J214"}
-				email={"lrawluk@nwpolytech.ca"}
-				phone={"780-539-2738"}
-				courses={["CH1030 Chemistry 1"]}
-				outlines={["CH1030"]}
-				timetable={"LRawluk"}
+		<main className={"flex flex-col p-8 gap-8"}>
+			<div className={"flex flex-col gap-1"}>
+				<h1 className={"font-bree font-bold text-4xl text-sky-800"}>Engineering Instructors</h1>
+				<h2 className={"font-bree font-light text-lg text-slate-500"}>Click each card to view more details</h2>
+			</div>
+			<section className={"flex flex-row flex-wrap gap-4"}>
+				<ProfCard
+					image={"bKelly.png"}
+					firstName={"Braden"}
+					lastName={"Kelly"}
+					role={"Engineering Instructor"}
+					office={"J218"}
+					email={"bkelly@nwpolytech.ca"}
+					phone={"780-539-2963"}
+					courses={["EG1000 Success in Engineering","EG1300 Engineering Mechanics"]}
+					outlines={["EG1300","EG1300"]}
+					timetable={"BKelly"}
 				/>
-			<ProfCard
-				firstName={"Glenda"}
-				lastName={"Delos Reyes"}
-				role={"Physics Instructor"}
-				office={"J216"}
-				email={"gdelosreyes@nwpolytech.ca"}
-				phone={"780-539-2985"}
-				courses={["PC1300 Wave Motion, Optics, and Sound"]}
-				outlines={["PC1300"]}
-				timetable={"GDelosReyes"}
-			/>
-			<ProfCard
-				firstName={"Tom"}
-				lastName={"mcLeister"}
-				role={"Math Instructor"}
-				office={"J212"}
-				email={"tmcleister@nwpolytech.ca"}
-				courses={["MA1000 Calculus 1"]}
-				outlines={["MA1000"]}
-				timetable={"TMcLeister"}
-			/>
-			<ProfCard
-				firstName={"Heather"}
-				lastName={"Joyce"}
-				role={"English Instructor"}
-				office={"C418"}
-				email={"hjoyce@nwpolytech.ca"}
-				phone={"780-539-2977"}
-				courses={["EN1990 English for Engineers"]}
-				outlines={["EN1990"]}
-			/>
-			<ProfCard
-				firstName={"Abdel"}
-				lastName={"Bensouilah"}
-				role={"Math Instructor"}
-				office={"J210"}
-				email={"abensouilah@nwpolytech.ca"}
-				courses={["MA1020 Linear Algebra"]}
-			/>
-			<ProfCard
-				firstName={"Brian"}
-				lastName={"Redmond"}
-				role={"Chair of Schience Dept."}
-				office={"J206"}
-			/>
+				<ProfCard
+					image={"lRawluk.jpg"}
+					firstName={"Les"} 
+					lastName={"Rawluk"}
+					role={"Chemistry Instructor"}
+					office={"J214"}
+					email={"lrawluk@nwpolytech.ca"}
+					phone={"780-539-2738"}
+					courses={["CH1030 Chemistry 1"]}
+					outlines={["CH1030"]}
+					timetable={"LRawluk"}
+					/>
+				<ProfCard
+					firstName={"Glenda"}
+					lastName={"Delos Reyes"}
+					role={"Physics Instructor"}
+					office={"J216"}
+					email={"gdelosreyes@nwpolytech.ca"}
+					phone={"780-539-2985"}
+					courses={["PC1300 Wave Motion, Optics, and Sound"]}
+					outlines={["PC1300"]}
+					timetable={"GDelosReyes"}
+				/>
+				<ProfCard
+					firstName={"Tom"}
+					lastName={"mcLeister"}
+					role={"Math Instructor"}
+					office={"J212"}
+					email={"tmcleister@nwpolytech.ca"}
+					courses={["MA1000 Calculus 1"]}
+					outlines={["MA1000"]}
+					timetable={"TMcLeister"}
+				/>
+				<ProfCard
+					firstName={"Heather"}
+					lastName={"Joyce"}
+					role={"English Instructor"}
+					office={"C418"}
+					email={"hjoyce@nwpolytech.ca"}
+					phone={"780-539-2977"}
+					courses={["EN1990 English for Engineers"]}
+					outlines={["EN1990"]}
+				/>
+				<ProfCard
+					firstName={"Abdel"}
+					lastName={"Bensouilah"}
+					role={"Math Instructor"}
+					office={"J210"}
+					email={"abensouilah@nwpolytech.ca"}
+					courses={["MA1020 Linear Algebra"]}
+				/>
+				<ProfCard
+					firstName={"Brian"}
+					lastName={"Redmond"}
+					role={"Chair of Schience Dept."}
+					office={"J206"}
+				/>
+			</section>
 		</main>
 	</>);
 }
