@@ -153,6 +153,7 @@ export default function Courses() {
 				phone={"780-539-2985"}
 				courses={["PC1300 Wave Motion, Optics, and Sound"]}
 				outlines={["PC1300"]}
+				timetable={"GDelosReyes"}
 			/>
 			<ProfCard
 				firstName={"Tom"}
