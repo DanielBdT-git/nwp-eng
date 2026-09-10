@@ -76,7 +76,7 @@ function ProfCard({image, firstName, lastName, role, office, email, phone, cours
 						<span className={isHovered ? "text-slate-700" : "text-slate-100"}>Download Timetable</span>
 					</a>
 				</div>
-			:null}
+			:<p className={`font-bree font-light text-sm ${tertiaryText}`}>No timetable available</p>}
 			{courses && outlines ?
 				<div className={"flex flex-col gap-1"}>
 					<p className={`font-bree text-sm font-light ${tertiaryText}`}>Course Outlines:</p>
@@ -95,7 +95,7 @@ function ProfCard({image, firstName, lastName, role, office, email, phone, cours
 							))}
 					</ul>
 				</div>
-			:null}
+			:<p className={`font-bree font-light text-sm ${tertiaryText}`}>No course outlines available</p>}
 		</div>
 	)
 
@@ -153,6 +153,7 @@ export default function Courses() {
 				phone={"780-539-2985"}
 				courses={["PC1300 Wave Motion, Optics, and Sound"]}
 				outlines={["PC1300"]}
+				timetable={"GDelosReyes"}
 			/>
 			<ProfCard
 				firstName={"Tom"}
