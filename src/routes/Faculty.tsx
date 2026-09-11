@@ -134,7 +134,7 @@ export default function Courses() {
 					email={"bkelly@nwpolytech.ca"}
 					phone={"780-539-2963"}
 					courses={["EG1000 Success in Engineering","EG1300 Engineering Mechanics"]}
-					outlines={["EG1300","EG1300"]}
+					outlines={["EG1000","EG1300"]}
 					timetable={"BKelly"}
 				/>
 				<ProfCard
