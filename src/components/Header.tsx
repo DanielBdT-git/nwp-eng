@@ -71,12 +71,12 @@ export default function Header({currentTab}:HeaderProps) {
 			<div className={"bg-sky-800/80"}>
 				<a
 					href={"/"}
-					className={"w-max flex flex-row items-center p-8 gap-4"}
+					className={"w-full flex flex-row items-center p-8 gap-4"}
 				>
 					<span className="size-16 text-white h-full">
 						<NWP/>
 					</span>
-					<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Students Hub</h1>
+					<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Hub</h1>
 				</a>
 			</div>
 			<nav className={"bg-sky-900/95 flex flex-row items-center px-8 gap-8"}>
