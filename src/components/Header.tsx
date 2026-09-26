@@ -23,24 +23,24 @@ type NavDropdownProps = {
 
 function NavDropdown({children, links, titles}:NavDropdownProps) {
 
-	const [isExpanded, setExpanded] = useState<boolean>(false);
-	const [isForced, setForced] = useState<boolean>(false);
+	const [isHovered, setHovered] = useState<boolean>(false);
+	const [isClicked, setClicked] = useState<boolean>(false);
 
 	return (
 		<div
-			onMouseEnter={() => setExpanded(true)}
-			onMouseLeave={() => setExpanded(false)}
-			onBlur={() => setForced(false)}
+			onMouseEnter={() => setHovered(true)}
+			onMouseLeave={() => setHovered(false)}
+			onBlur={() => setClicked(false)}
 		>
 			<button
-				onClick={() => setForced(!isForced)}
-				className={`flex flex-row items-center py-4 gap-1 font-outfit text-white text-lg cursor-pointer hover:font-medium ${isExpanded||isForced?"font-medium":""}`}
+				onClick={() => {if(isClicked){setHovered(false)}; setClicked(!isClicked)}}
+				className={`flex flex-row items-center py-4 gap-1 font-outfit text-white text-lg cursor-pointer hover:font-medium ${isHovered||isClicked?"font-medium":""}`}
 			>
 				{children}
-				<i className={`ph-fill ph-caret-down transition duration-200 text-sm ${isExpanded||isForced?"rotate-180":"rotate-0"}`}></i>
+				<i className={`ph-fill ph-caret-down transition duration-200 text-sm ${isHovered||isClicked?"rotate-180":"rotate-0"}`}></i>
 			</button>
 
-			{isExpanded || isForced
+			{isHovered || isClicked
 				?<ul className={"absolute z-999 shadow-lg"}>
 					{titles.map((title,idx) => (
 						<li key={idx} className={"flex bg-sky-900 hover:bg-sky-800 last:rounded-b"}>
@@ -62,7 +62,7 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 
 
 type HeaderProps = {
-	currentTab: "404" | "Home" | "Faculty" | "Maps";
+	currentTab: "404" | "Home" | "Faculty" | "Documents";
 }
 
 export default function Header({currentTab}:HeaderProps) {
@@ -71,12 +71,12 @@ export default function Header({currentTab}:HeaderProps) {
 			<div className={"bg-sky-800/80"}>
 				<a
 					href={"/"}
-					className={"w-max flex flex-row items-center p-8 gap-4"}
+					className={"w-full flex flex-row items-center p-8 gap-4"}
 				>
 					<span className="size-16 text-white h-full">
 						<NWP/>
 					</span>
-					<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Students Hub</h1>
+					<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Hub</h1>
 				</a>
 			</div>
 			<nav className={"bg-sky-900/95 flex flex-row items-center px-8 gap-8"}>
@@ -88,7 +88,7 @@ export default function Header({currentTab}:HeaderProps) {
 					Quick Links
 				</NavDropdown>
 				<NavLink to={"/faculty"} current={currentTab==="Faculty"}>Faculty</NavLink>
-				<NavLink to={"/maps"} current={currentTab==="Maps"}>Maps</NavLink>
+				<NavLink to={"/documents"} current={currentTab==="Documents"}>Important Documents</NavLink>
 			</nav>
 		</header>
 	);
