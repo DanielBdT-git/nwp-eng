@@ -27,13 +27,7 @@ function QuickLink({label, url, icon}:QuickLinkProps) {
 export default function Home() {
   return (<>
       <Header currentTab={"Home"}/>
-      <main className="flex flex-col-reverse sm:flex-col-reverse md:flex-row p-4 gap-4">
-      	<section className="flex-2">
-					<img
-						src="/map_gp_campus.webp"
-						className={"rounded-lg shadow-md"}
-					/>
-				</section>
+      <main className="flex flex-col sm:flex-col md:flex-row p-4 gap-4">
      		<section className={"flex flex-col flex-1 p-4 gap-4 bg-sky-50 rounded-lg shadow-md"}>
      			<h1 className={"text-4xl font-bree font-black tracking-wide text-sky-800"}>
      				Quick Links
@@ -51,6 +45,12 @@ export default function Home() {
    					<QuickLink label={"OneDrive"} url={"gprc-my.sharepoint.com"} icon={<OneDrive/>}/>
    				</div>
      		</section>
+      	<section className="flex-2">
+					<img
+						src="/map_gp_campus.webp"
+						className={"rounded-lg shadow-md"}
+					/>
+				</section>
       </main>
   </>)
 }
