@@ -8,7 +8,7 @@ import {
 
 // Synchronous
 import Home from './routes/Home.tsx';
-import Faculty from "./routes/Faculty.tsx";
+import Instructors from "./routes/Instructors.tsx";
 import Documents from "./routes/Documents.tsx";
 
 // Asynchronous (throws a promise)
@@ -21,7 +21,7 @@ export default function App() {
           <Router>
             {/* Alternative dedicated route component for better TS support */}
             <Route path="/" component={Home}/>
-            <Route path="/faculty" component={Faculty}/>
+            <Route path="/Instructors" component={Instructors}/>
             <Route path="/documents" component={Documents}/>
             
             {/* `default` prop indicates a fallback route. Useful for 404 pages */}

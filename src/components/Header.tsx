@@ -62,7 +62,7 @@ function NavDropdown({children, links, titles}:NavDropdownProps) {
 
 
 type HeaderProps = {
-	currentTab: "404" | "Home" | "Faculty" | "Documents";
+	currentTab: "404" | "Home" | "Instructors" | "Documents";
 }
 
 export default function Header({currentTab}:HeaderProps) {
@@ -87,7 +87,7 @@ export default function Header({currentTab}:HeaderProps) {
 				>
 					Quick Links
 				</NavDropdown>
-				<NavLink to={"/faculty"} current={currentTab==="Faculty"}>Faculty</NavLink>
+				<NavLink to={"/Instructors"} current={currentTab==="Instructors"}>Instructors</NavLink>
 				<NavLink to={"/documents"} current={currentTab==="Documents"}>Important Documents</NavLink>
 			</nav>
 		</header>
