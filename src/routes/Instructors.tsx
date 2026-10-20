@@ -118,7 +118,7 @@ function ProfCard({image, firstName, lastName, role, office, email, phone, cours
 // the page itself
 export default function Courses() {
 	return (<>
-		<Header currentTab={"Faculty"}/>
+		<Header currentTab={"Instructors"}/>
 		<main className={"flex flex-col p-8 gap-8"}>
 			<div className={"flex flex-col gap-1"}>
 				<h1 className={"font-bree font-bold text-4xl text-sky-800"}>Engineering Instructors</h1>
