@@ -1,4 +1,5 @@
 import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
 import { GovAlberta, NWP, Outlook, OneDrive } from "../components/Icons.tsx"
 import type { ReactNode } from "preact/compat"
 
@@ -52,5 +53,6 @@ export default function Home() {
 					/>
 				</section>
       </main>
+			<Footer />
   </>)
 }

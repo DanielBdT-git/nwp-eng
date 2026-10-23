@@ -1,4 +1,5 @@
 import Header from "../components/Header.tsx"
+import Footer from "../components/Footer.tsx";
 import { useState } from "preact/compat"
 
 type profCardProps = {
@@ -199,5 +200,6 @@ export default function Courses() {
 				/>
 			</section>
 		</main>
+		<Footer />
 	</>);
 }
