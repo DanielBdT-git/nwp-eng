@@ -126,7 +126,7 @@ export default function Courses() {
 			</div>
 			<section className={"flex flex-row flex-wrap gap-4"}>
 				<ProfCard
-					image={"bKelly.png"}
+					image={"braden_brainrot.jpg"}
 					firstName={"Braden"}
 					lastName={"Kelly"}
 					role={"Engineering Instructor"}
@@ -138,7 +138,7 @@ export default function Courses() {
 					timetable={"BKelly"}
 				/>
 				<ProfCard
-					image={"lRawluk.jpg"}
+					image={"les_brainrot.jpg"}
 					firstName={"Les"} 
 					lastName={"Rawluk"}
 					role={"Chemistry Instructor"}
@@ -150,6 +150,7 @@ export default function Courses() {
 					timetable={"LRawluk"}
 					/>
 				<ProfCard
+					image={"glenda_brainrot.jpg"}
 					firstName={"Glenda"}
 					lastName={"Delos Reyes"}
 					role={"Physics Instructor"}
@@ -161,6 +162,7 @@ export default function Courses() {
 					timetable={"GDelosReyes"}
 				/>
 				<ProfCard
+					image={"tom_brainrot.jpg"}
 					firstName={"Tom"}
 					lastName={"mcLeister"}
 					role={"Math Instructor"}
@@ -171,6 +173,7 @@ export default function Courses() {
 					timetable={"TMcLeister"}
 				/>
 				<ProfCard
+					image={"heather_brainrot.jpg"}
 					firstName={"Heather"}
 					lastName={"Joyce"}
 					role={"English Instructor"}
