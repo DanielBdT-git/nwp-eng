@@ -1,5 +1,6 @@
 import type { ReactNode } from "preact/compat";
 import { useState } from "preact/compat"
+import { Logo } from "./Icons";
 
 type NavLinkProps = {
   to: string;
@@ -66,14 +67,14 @@ type HeaderProps = {
 
 export default function Header({currentTab}:HeaderProps) {
 	return (
-		<header className={"bg-[url(/plane.jpg)] bg-center bg-cover bg-no-repeat"}>
+		<header className={"bg-[url(/plane.webp)] bg-center bg-cover bg-no-repeat"}>
 			<div className={"bg-sky-800/80"}>
 				<a
 					href={"/"}
 					className={"w-full flex flex-row items-center p-8 gap-4"}
 				>
 					<span className="size-16 text-white h-full">
-						<img src={"/logo.svg"}/>
+						<Logo/>
 					</span>
 					<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Hub</h1>
 				</a>

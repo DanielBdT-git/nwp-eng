@@ -28,7 +28,7 @@ function ProfCard({image, firstName, lastName, role, office, email, phone, cours
 	const CardFront = ({classes}:{classes?:string}) => (
 		<div className={`${classes} flex flex-col gap-2`}>
 			<img
-				src={`/profs/${image ? image : "unknown.jpg"}`}
+				src={`/profs/${image ? image : "unknown.webp"}`}
 				alt={`${firstName} ${lastName}`}
 				className={"h-2/3 object-cover rounded-md border-2 border-sky-50"}
 			/>
@@ -127,7 +127,7 @@ export default function Courses() {
 			</div>
 			<section className={"flex flex-row flex-wrap gap-4"}>
 				<ProfCard
-					image={"braden_brainrot.jpg"}
+					image={"braden_brainrot.webp"}
 					firstName={"Braden"}
 					lastName={"Kelly"}
 					role={"Engineering Instructor"}
@@ -139,7 +139,7 @@ export default function Courses() {
 					timetable={"BKelly"}
 				/>
 				<ProfCard
-					image={"les_brainrot.jpg"}
+					image={"les_brainrot.webp"}
 					firstName={"Les"} 
 					lastName={"Rawluk"}
 					role={"Chemistry Instructor"}
@@ -151,7 +151,7 @@ export default function Courses() {
 					timetable={"LRawluk"}
 					/>
 				<ProfCard
-					image={"glenda_brainrot.jpg"}
+					image={"glenda_brainrot.webp"}
 					firstName={"Glenda"}
 					lastName={"Delos Reyes"}
 					role={"Physics Instructor"}
@@ -163,7 +163,7 @@ export default function Courses() {
 					timetable={"GDelosReyes"}
 				/>
 				<ProfCard
-					image={"tom_brainrot.jpg"}
+					image={"tom_brainrot.webp"}
 					firstName={"Tom"}
 					lastName={"mcLeister"}
 					role={"Math Instructor"}
@@ -174,7 +174,7 @@ export default function Courses() {
 					timetable={"TMcLeister"}
 				/>
 				<ProfCard
-					image={"heather_brainrot.jpg"}
+					image={"heather_brainrot.webp"}
 					firstName={"Heather"}
 					lastName={"Joyce"}
 					role={"English Instructor"}

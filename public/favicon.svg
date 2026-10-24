@@ -1,0 +1,13 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 32 32"
+	fill="#FFFFFF"
+  background="#00000"
+>
+  <rect width="32" height="32" fill="#000000"></rect>
+  <g transform="translate(4,4)">
+    <path d="M 0 24 , 4 0 , 15 0 , 12.75 8.5 , 8 4.5 , 4 24 Z"></path>
+    <path d="M 6 24 , 9.25 8.25 , 13.75 12, 14.5 9 , 20 9 , 18 15 , 10 15 , 9.5 17 , 21 17 , 19 24 Z"></path>
+    <path d="M 15 7 , 17 0 , 24 0 , 22 7 Z"></path>
+  </g>
+</svg>
