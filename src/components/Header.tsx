@@ -1,6 +1,5 @@
 import type { ReactNode } from "preact/compat";
 import { useState } from "preact/compat"
-import { NWP } from "./Icons.tsx";
 
 type NavLinkProps = {
   to: string;
@@ -74,7 +73,7 @@ export default function Header({currentTab}:HeaderProps) {
 					className={"w-full flex flex-row items-center p-8 gap-4"}
 				>
 					<span className="size-16 text-white h-full">
-						<NWP/>
+						<img src={"/logo.svg"}/>
 					</span>
 					<h1 className={"text-white font-bold text-4xl font-outfit"}>Engineering Hub</h1>
 				</a>
