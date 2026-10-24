@@ -195,7 +195,7 @@ export default function Courses() {
 				<ProfCard
 					firstName={"Brian"}
 					lastName={"Redmond"}
-					role={"Chair of Schience Dept."}
+					role={"Chair of Science Dept."}
 					office={"J206"}
 				/>
 			</section>
