@@ -5,10 +5,11 @@ export const GovAlberta = () => (
 )
 
 export const NWP = () => (
-	<svg className="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 47">
-	    <path d="M55.835 4.797C53.575 1.596 50.05 0 45.255 0H40.54l-7.563 24.63-11.552-9.01L11.974 47H24.97l4.45-14.778h6.856c5.275 0 9.794-1.417 13.546-4.262 3.753-2.844 6.248-6.571 7.495-11.18 1.268-4.787.767-8.781-1.493-11.983h.01z"/>
-	    <path d="M19.617 9.892l11.581 9.029L37.005 0H14.155L0 47h8.438L19.617 9.892z"/>
-	</svg>
+	<svg className="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+		<path d="M 0 24 , 4 0 , 14 0 , 11.75 8.5 , 7 4.5 , 4 24"></path>
+  <path d="M 5 24 , 8 7 , 12.5 11 , 13 9 , 20 9 , 18 15 , 8 15 , 8 17 , 21 17 , 19 24"></path>
+  <path d="M 15.5 0 , 24 0  22 7 , 13.5 7 "></path>
+</svg>
 )
 
 export const Outlook = () => (
