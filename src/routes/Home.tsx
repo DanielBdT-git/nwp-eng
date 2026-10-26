@@ -1,6 +1,6 @@
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
-import { GovAlberta, NWP, Outlook, OneDrive } from "../components/Icons.tsx"
+import { GovAlberta, NWP, Outlook, OneDrive, Popcorn } from "../components/Icons.tsx"
 import type { ReactNode } from "preact/compat"
 
 type QuickLinkProps = {
@@ -42,6 +42,7 @@ export default function Home() {
    					<QuickLink label={"myPass"} url={"public.education.alberta.ca/PASI/mypass/home"} icon={<GovAlberta/>}/>
    					<QuickLink label={"Important Dates"} url={"nwpolytech.ca/events?name=&event_category%5B568%5D=568&date="} icon={"calendar-blank"}/>
    					<QuickLink label={"NWP Students' Association"} url={"nwpsa.ca"} icon={<NWP/>}/>
+						<QuickLink label={"Criterion Streaming"} url={"media3.criterionpic.com/cod/lcl_top_subjects.htx"} icon={<Popcorn/>}/>
    					<QuickLink label={"Outlook"} url={"outlook.office.com/mail"} icon={<Outlook/>}/>
    					<QuickLink label={"OneDrive"} url={"gprc-my.sharepoint.com"} icon={<OneDrive/>}/>
    				</div>
