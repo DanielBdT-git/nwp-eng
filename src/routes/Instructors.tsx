@@ -165,7 +165,7 @@ export default function Courses() {
 				<ProfCard
 					image={"tom_brainrot.webp"}
 					firstName={"Tom"}
-					lastName={"mcLeister"}
+					lastName={"McLeister"}
 					role={"Math Instructor"}
 					office={"J212"}
 					email={"tmcleister@nwpolytech.ca"}
