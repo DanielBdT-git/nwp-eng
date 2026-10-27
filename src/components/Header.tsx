@@ -82,8 +82,8 @@ export default function Header({currentTab}:HeaderProps) {
 			<nav className={"bg-sky-900/95 flex flex-row items-center px-8 gap-8"}>
 				<NavLink to={"/"} current={currentTab==="Home"}>Home</NavLink>
 				<NavDropdown
-					titles={["myNWP","myClass","NWP Website","Outlook","OneDrive"]}
-					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca","outlook.office.com/mail","gprc-my.sharepoint.com"]}
+					titles={["myNWP","myClass","NWP Website"]}
+					links={["my.nwpolytech.ca/SelfService/home.aspx","myclass.nwpolytech.ca","nwpolytech.ca"]}
 				>
 					Quick Links
 				</NavDropdown>
